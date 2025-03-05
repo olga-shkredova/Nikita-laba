@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фитнес-клуб "EnergyGym" | Тренажерный зал и групповые занятия в Москве</title>
+    <meta name="description" content="Фитнес-клуб 'EnergyGym' предлагает современный тренажерный зал, групповые занятия и персональные тренировки. Запишитесь на пробное занятие!">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0; /* Уменьшили padding сверху и снизу */
+            text-align: center;
+        }
+        nav {
+            margin: 5px 0; /* Уменьшили отступы */
+        }
+        nav a {
+            color: #fff;
+            margin: 0 10px; /* Уменьшили отступы между ссылками */
+            text-decoration: none;
+            font-size: 25px; /* Уменьшили размер шрифта */
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        input, button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать в фитнес-клуб "EnergyGym"</h1>
+        <nav>
+            <a href="/about">О нас</a>
+            <a href="/services">Услуги</a>
+            <a href="/schedule">Расписание</a>
+            <a href="/contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <section>
+        <h2>Почему выбирают нас?</h2>
+        <p>Фитнес-клуб "EnergyGym" — это современное оборудование, профессиональные тренеры и уютная атмосфера. Мы предлагаем:</p>
+        <ul>
+            <li>Тренажерный зал с новейшими тренажерами.</li>
+            <li>Групповые занятия: йога, пилатес, функциональный тренинг.</li>
+            <li>Персональные тренировки для достижения ваших целей.</li>
+        </ul>
+        <img src="images/gym.jpg" alt="Тренажерный зал в фитнес-клубе EnergyGym" style="width: 100%">
+    </section>
+
+    <section>
+        <h2>Наши услуги</h2>
+        <p>Мы поможем вам достичь ваших фитнес-целей. У нас есть:</p>
+        <ul>
+            <li><strong>Тренажерный зал</strong> — более 100 тренажеров.</li>
+            <li><strong>Групповые занятия</strong> — более 10 направлений.</li>
+            <li><strong>Персональные тренировки</strong> — индивидуальный подход.</li>
+        </ul>
+        <img src="images/group-training.png" alt="Групповые занятия в фитнес-клубе EnergyGym" style="width: 100%">
+    </section>
+
+    <section>
+        <h2>Запишитесь на пробное занятие</h2>
+        <p>Оставьте заявку, и мы свяжемся с вами для записи на пробное занятие.</p>
+        <form action="/submit" method="post">
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="tel" name="phone" placeholder="Ваш телефон" required>
+            <button type="submit">Отправить</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2023 Фитнес-клуб "EnergyGym". Все права защищены.</p>
+    </footer>
+</body>
+</html>
