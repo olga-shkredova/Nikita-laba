@@ -17,17 +17,17 @@
         header {
             background: #333;
             color: #fff;
-            padding: 10px 0; /* Уменьшили padding сверху и снизу */
+            padding: 10px 0;
             text-align: center;
         }
         nav {
-            margin: 5px 0; /* Уменьшили отступы */
+            margin: 5px 0;
         }
         nav a {
             color: #fff;
-            margin: 0 10px; /* Уменьшили отступы между ссылками */
+            margin: 0 10px;
             text-decoration: none;
-            font-size: 25px; /* Уменьшили размер шрифта */
+            font-size: 25px;
         }
         section {
             padding: 20px;
@@ -70,53 +70,247 @@
         button:hover {
             background: #555;
         }
+        .partners {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .partners a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .partners a:hover {
+            color: #555;
+        }
+        .social-sharing {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .social-sharing a {
+            display: inline-block;
+            margin: 0 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .social-sharing a:hover {
+            background-color: #555;
+        }
+        .social-sharing img {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin-right: 5px;
+        }
+
+        /* Мобильная оптимизация */
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            nav a {
+                font-size: 18px;
+                padding: 5px 10px;
+                background-color: #444;
+                border-radius: 5px;
+                width: 80%;
+                text-align: center;
+            }
+            section {
+                margin: 10px;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            h2 {
+                font-size: 20px;
+            }
+            p, li {
+                font-size: 16px;
+            }
+            img {
+                margin: 10px 0;
+            }
+            form {
+                width: 100%;
+            }
+            input, button {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .social-sharing a {
+                display: block;
+                margin: 10px auto;
+                width: 80%;
+                text-align: center;
+            }
+            .social-sharing img {
+                width: 16px;
+                height: 16px;
+            }
+            .partners ul {
+                padding-left: 20px;
+            }
+            .partners a {
+                font-size: 14px;
+            }
+            header, footer {
+                padding: 10px;
+            }
+            section {
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
         <h1>Добро пожаловать в фитнес-клуб "EnergyGym"</h1>
         <nav>
-            <a href="/about">О нас</a>
-            <a href="/services">Услуги</a>
-            <a href="/schedule">Расписание</a>
-            <a href="/contacts">Контакты</a>
+            <a href="#" onclick="showPage('main')">Главная</a>
+            <a href="#" onclick="showPage('services')">Услуги</a>
+            <a href="#" onclick="showPage('schedule')">Расписание</a>
+            <a href="#" onclick="showPage('contacts')">Контакты</a>
         </nav>
     </header>
 
-    <section>
-        <h2>Почему выбирают нас?</h2>
-        <p>Фитнес-клуб "EnergyGym" — это современное оборудование, профессиональные тренеры и уютная атмосфера. Мы предлагаем:</p>
-        <ul>
-            <li>Тренажерный зал с новейшими тренажерами.</li>
-            <li>Групповые занятия: йога, пилатес, функциональный тренинг.</li>
-            <li>Персональные тренировки для достижения ваших целей.</li>
-        </ul>
-        <img src="https://avanta.fit/upload/iblock/b5b/b5beadb90c27ee50683d0ec72ad8ede1.png" alt="Тренажерный зал в фитнес-клубе EnergyGym" style="width: 100%">
-    </section>
+    <!-- Главная страница -->
+    <div id="main" class="page">
+        <section>
+            <h2>Почему выбирают нас?</h2>
+            <p>Фитнес-клуб "EnergyGym" — это современное оборудование, профессиональные тренеры и уютная атмосфера. Мы предлагаем:</p>
+            <ul>
+                <li>Тренажерный зал с новейшими тренажерами.</li>
+                <li>Групповые занятия: йога, пилатес, функциональный тренинг.</li>
+                <li>Персональные тренировки для достижения ваших целей.</li>
+            </ul>
+            <img src="images/gym.jpg" alt="Тренажерный зал в фитнес-клубе EnergyGym" style="width: 100%">
+        </section>
 
-    <section>
-        <h2>Наши услуги</h2>
-        <p>Мы поможем вам достичь ваших фитнес-целей. У нас есть:</p>
-        <ul>
-            <li><strong>Тренажерный зал</strong> — более 100 тренажеров.</li>
-            <li><strong>Групповые занятия</strong> — более 10 направлений.</li>
-            <li><strong>Персональные тренировки</strong> — индивидуальный подход.</li>
-        </ul>
-        <img src="https://strekoza.ua/uploads/%D0%90%D0%BA%D1%86%D0%B8%D0%B8/%D1%813_5262.jpg" alt="Групповые занятия в фитнес-клубе EnergyGym" style="width: 100%">
-    </section>
+        <section>
+            <h2>Наши услуги</h2>
+            <p>Мы поможем вам достичь ваших фитнес-целей. У нас есть:</p>
+            <ul>
+                <li><strong>Тренажерный зал</strong> — более 100 тренажеров.</li>
+                <li><strong>Групповые занятия</strong> — более 10 направлений.</li>
+                <li><strong>Персональные тренировки</strong> — индивидуальный подход.</li>
+            </ul>
+            <img src="images/group-training.png" alt="Групповые занятия в фитнес-клубе EnergyGym" style="width: 100%">
+        </section>
 
-    <section>
-        <h2>Запишитесь на пробное занятие</h2>
-        <p>Оставьте заявку, и мы свяжемся с вами для записи на пробное занятие.</p>
-        <form action="/submit" method="post">
-            <input type="text" name="name" placeholder="Ваше имя" required>
-            <input type="tel" name="phone" placeholder="Ваш телефон" required>
-            <button type="submit">Отправить</button>
-        </form>
-    </section>
+        <section>
+            <h2>Запишитесь на пробное занятие</h2>
+            <p>Оставьте заявку, и мы свяжемся с вами для записи на пробное занятие.</p>
+            <form action="/submit" method="post">
+                <input type="text" name="name" placeholder="Ваше имя" required>
+                <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Наши партнеры</h2>
+            <div class="partners">
+                <p>Мы сотрудничаем с лучшими фитнес-ресурсами и клубами. Рекомендуем посетить:</p>
+                <ul>
+                    <li><a href="https://www.mf.by/" target="_blank" rel="nofollow">MF.by — Портал о здоровье и фитнесе</a></li>
+                    <li><a href="https://worldclass.by/" target="_blank" rel="nofollow">World Class — Премиальные фитнес-клубы</a></li>
+                    <li><a href="http://fitness-club.by/" target="_blank" rel="nofollow">Fitness Club — Фитнес-клуб</a></li>
+                    <li><a href="http://www.adrenalin-fitness.by/" target="_blank" rel="nofollow">Адреналин — Сеть фитнес-клубов</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <div class="social-sharing">
+            <p>Поделиться в социальных сетях:</p>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=ВАШ_САЙТ" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                Facebook
+            </a>
+            <a href="https://twitter.com/intent/tweet?url=ВАШ_САЙТ&text=Посетите%20фитнес-клуб%20EnergyGym!" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Twitter-logo.svg" alt="Twitter">
+                Twitter
+            </a>
+            <a href="https://vk.com/share.php?url=ВАШ_САЙТ" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/VK.com-logo.svg" alt="VK">
+                ВКонтакте
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                Instagram
+            </a>
+        </div>
+    </div>
+
+    <!-- Страница "Услуги" -->
+    <div id="services" class="page" style="display: none;">
+        <section>
+            <h2>Наши услуги</h2>
+            <p>Мы предлагаем широкий спектр услуг для вашего комфорта и достижения целей:</p>
+            <ul>
+                <li><strong>Тренажерный зал</strong> — современное оборудование для всех групп мышц.</li>
+                <li><strong>Групповые занятия</strong> — йога, пилатес, аэробика, танцы и многое другое.</li>
+                <li><strong>Персональные тренировки</strong> — индивидуальный подход и программа тренировок.</li>
+                <li><strong>Детский фитнес</strong> — занятия для детей от 3 лет.</li>
+            </ul>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQp6IJ809CCuMwlA_FZUIdEY1AnsnUg_Z0Ww&s" alt="Услуги фитнес-клуба EnergyGym" style="width: 100%">
+        </section>
+    </div>
+
+    <!-- Страница "Расписание" -->
+    <div id="schedule" class="page" style="display: none;">
+        <section>
+            <h2>Расписание занятий</h2>
+            <p>Наше расписание составлено так, чтобы вы могли выбрать удобное время для тренировок:</p>
+            <ul>
+                <li><strong>Понедельник</strong> — йога (10:00), тренажерный зал (18:00).</li>
+                <li><strong>Среда</strong> — пилатес (10:00), функциональный тренинг (18:00).</li>
+                <li><strong>Пятница</strong> — танцы (10:00), силовая тренировка (18:00).</li>
+            </ul>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_a2zo45e1u7hF8ee-4v9dZ7HCve3UvGhpXQ&s" alt="Расписание занятий в фитнес-клубе EnergyGym" style="width: 100%">
+        </section>
+    </div>
+
+    <!-- Страница "Контакты" -->
+    <div id="contacts" class="page" style="display: none;">
+        <section>
+            <h2>Контакты</h2>
+            <p>Мы всегда рады видеть вас в нашем клубе. Наши контакты:</p>
+            <ul>
+                <li><strong>Адрес:</strong> г. Москва, ул. Фитнесная, д. 10.</li>
+                <li><strong>Телефон:</strong> +7 (999) 123-45-67.</li>
+                <li><strong>Email:</strong> info@energygym.ru.</li>
+            </ul>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHnOsSZdYOAelcSox3DnXHhluKF--unCIi1w&s" alt="Контакты фитнес-клуба EnergyGym" style="width: 100%">
+        </section>
+    </div>
 
     <footer>
         <p>© 2023 Фитнес-клуб "EnergyGym". Все права защищены.</p>
     </footer>
+
+    <script>
+        // Функция для переключения между страницами
+        function showPage(pageId) {
+            // Скрываем все страницы
+            document.querySelectorAll('.page').forEach(page => {
+                page.style.display = 'none';
+            });
+
+            // Показываем выбранную страницу
+            document.getElementById(pageId).style.display = 'block';
+        }
+
+        // По умолчанию показываем главную страницу
+        showPage('main');
+    </script>
 </body>
 </html>
